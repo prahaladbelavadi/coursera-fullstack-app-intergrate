@@ -1,0 +1,2768 @@
+{
+	"info": {
+		"_postman_id": "aa0ba85e-c8e9-4279-aaa3-4854c974e82f",
+		"name": "hkuni-serversidescripting",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "dishes",
+			"item": [
+				{
+					"name": "localhost:300/dishes/",
+					"item": [
+						{
+							"name": "delete localhost:3000/dishes",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "localhost:3000/dishes",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"dishes"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "post localhost:3000/dishes",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n      \"name\": \"Uthappizza\",\r\n      \"image\": \"images/uthappizza.png\",\r\n      \"category\": \"mains\",\r\n      \"price\": \"4.99\",\r\n      \"featured\": \"true\",\r\n      \"description\": \"A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.\",\r\n      \"comments\": [\r\n        {\r\n          \"rating\": 5,\r\n          \"comment\": \"Imagine all the eatables, living in conFusion!\",\r\n          \"author\": \"John Lemon\",\r\n          \"date\": \"2012-10-16T17:57:28.556094Z\"\r\n        },\r\n        {\r\n          \"rating\": 4,\r\n          \"comment\": \"Sends anyone to heaven, I wish I could get my mother-in-law to eat it!\",\r\n          \"author\": \"Paul McVites\",\r\n          \"date\": \"2014-09-05T17:57:28.556094Z\"\r\n        },\r\n        {\r\n          \"rating\": 3,\r\n          \"comment\": \"Eat it, just eat it!\",\r\n          \"author\": \"Michael Jaikishan\",\r\n          \"date\": \"2015-02-13T17:57:28.556094Z\"\r\n        },\r\n        {\r\n          \"rating\": 4,\r\n          \"comment\": \"Ultimate, Reaching for the stars!\",\r\n          \"author\": \"Ringo Starry\",\r\n          \"date\": \"2013-12-02T17:57:28.556094Z\"\r\n        },\r\n        {\r\n          \"rating\": 2,\r\n          \"comment\": \"It's your birthday, we're gonna party!\",\r\n          \"author\": \"25 Cent\",\r\n          \"date\": \"2011-12-02T17:57:28.556094Z\"\r\n        }\r\n      ]\r\n    }"
+								},
+								"url": {
+									"raw": "localhost:3000/dishes",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"dishes"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Not authenticated - localhost:3000/dishes",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "localhost:3000/dishes",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"dishes"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:3000/dishes",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "localhost:3000/dishes",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"dishes"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "auth - localhost:3000/dishes",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Basic YWRtaW46cGFzc3dvcmQ="
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "localhost:3000/dishes",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"dishes"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"description": "BaseURL+/",
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "localhost:3000/dishes/:dishId",
+					"item": [
+						{
+							"name": "localhost:3000/dishes/:dishId",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "localhost:3000/dishes/5c2f1544b339fd0bb4112864",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"dishes",
+										"5c2f1544b339fd0bb4112864"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:3000/dishes/:dishId",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "localhost:3000/dishes/5c2fbad3505ca349ec3c6e1d",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"dishes",
+										"5c2fbad3505ca349ec3c6e1d"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:3000/dishes/:dishId",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"label\":\"hot\"}"
+								},
+								"url": {
+									"raw": "localhost:3000/dishes/5c2f1544b339fd0bb4112864",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"dishes",
+										"5c2f1544b339fd0bb4112864"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:3000/dishes/:dishId",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "localhost:3000/dishes/:dishId",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"dishes",
+										":dishId"
+									],
+									"variable": [
+										{
+											"key": "dishId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "localhost:3000/dishes/:dishId/comments",
+					"item": [
+						{
+							"name": "localhost:3000/dishes/:dishId/comments",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "localhost:3000/dishes/5c2fbb55505ca349ec3c6e23/comments",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"dishes",
+										"5c2fbb55505ca349ec3c6e23",
+										"comments"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:3000/dishes/:dishId/comments",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "localhost:3000/dishes/5c2fbb55505ca349ec3c6e23/comments",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"dishes",
+										"5c2fbb55505ca349ec3c6e23",
+										"comments"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:3000/dishes/:dishId/comments",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": " {\n        \"rating\": 5,\n        \"comment\": \"test!\",\n        \"author\": \"John temon\"\n        }"
+								},
+								"url": {
+									"raw": "localhost:3000/dishes/5c2fbb55505ca349ec3c6e23/comments",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"dishes",
+										"5c2fbb55505ca349ec3c6e23",
+										"comments"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:3000/dishes/:dishId/comments",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "localhost:3000/dishes/5c2fbb55505ca349ec3c6e23/comments",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"dishes",
+										"5c2fbb55505ca349ec3c6e23",
+										"comments"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "localhost:3000/dishes/:dishId/comments/commentId",
+					"item": [
+						{
+							"name": "localhost:3000/dishes/:dishId/comments/:commentId",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "localhost:3000/dishes/5c3055529957c03af8850fb3/comments/5c3055529957c03af8850fb8",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"dishes",
+										"5c3055529957c03af8850fb3",
+										"comments",
+										"5c3055529957c03af8850fb8"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:3000/dishes/:dishId/comments/:commentId",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n      \"name\": \"Uthappizza\",\r\n      \"image\": \"images/uthappizza.png\",\r\n      \"category\": \"mains\",\r\n      \"price\": \"4.99\",\r\n      \"featured\": \"true\",\r\n      \"description\": \"A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.\",\r\n      \"comments\": [\r\n        {\r\n          \"rating\": 5,\r\n          \"comment\": \"Imagine all the eatables, living in conFusion!\",\r\n          \"author\": \"John Lemon\",\r\n          \"date\": \"2012-10-16T17:57:28.556094Z\"\r\n        },\r\n        {\r\n          \"rating\": 4,\r\n          \"comment\": \"Sends anyone to heaven, I wish I could get my mother-in-law to eat it!\",\r\n          \"author\": \"Paul McVites\",\r\n          \"date\": \"2014-09-05T17:57:28.556094Z\"\r\n        },\r\n        {\r\n          \"rating\": 3,\r\n          \"comment\": \"Eat it, just eat it!\",\r\n          \"author\": \"Michael Jaikishan\",\r\n          \"date\": \"2015-02-13T17:57:28.556094Z\"\r\n        },\r\n        {\r\n          \"rating\": 4,\r\n          \"comment\": \"Ultimate, Reaching for the stars!\",\r\n          \"author\": \"Ringo Starry\",\r\n          \"date\": \"2013-12-02T17:57:28.556094Z\"\r\n        },\r\n        {\r\n          \"rating\": 2,\r\n          \"comment\": \"It's your birthday, we're gonna party!\",\r\n          \"author\": \"25 Cent\",\r\n          \"date\": \"2011-12-02T17:57:28.556094Z\"\r\n        }\r\n      ]\r\n    }"
+								},
+								"url": {
+									"raw": "localhost:3000/dishes/5c3055529957c03af8850fb3/comments/5c3055529957c03af8850fb8",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"dishes",
+										"5c3055529957c03af8850fb3",
+										"comments",
+										"5c3055529957c03af8850fb8"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:3000/dishes/:dishId/comments/:commentId",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n          \"rating\": 1,\r\n\t      \"comment\": \"update\"\r\n          }"
+								},
+								"url": {
+									"raw": "localhost:3000/dishes/5c3055529957c03af8850fb3/comments/5c3055529957c03af8850fb8",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"dishes",
+										"5c3055529957c03af8850fb3",
+										"comments",
+										"5c3055529957c03af8850fb8"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:3000/dishes/:dishId/comments/:commentId",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "localhost:3000/dishes/5c3055529957c03af8850fb3/comments/5c3055529957c03af8850fb6",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"dishes",
+										"5c3055529957c03af8850fb3",
+										"comments",
+										"5c3055529957c03af8850fb6"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		},
+		{
+			"name": "promotions",
+			"item": [
+				{
+					"name": "localhost:3000/promotions",
+					"item": [
+						{
+							"name": "localhost:3000/promotions",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"name\":\"promption-1\",\"description\":\"LALALALALA New description\"}"
+								},
+								"url": {
+									"raw": "localhost:3000/promotions/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"promotions",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:3000/promotions",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "localhost:3000/promotions",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"promotions"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:3000/promotions",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "localhost:3000/promotions",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"promotions"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:3000/promotions",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "localhost:3000/promotions",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"promotions"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "localhost:3000/promotions/:promoId",
+					"item": [
+						{
+							"name": "localhost:3000/promotions/:promoId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "localhost:3000/promotions/5c331b4497274036b8096db1",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"promotions",
+										"5c331b4497274036b8096db1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:3000/promotions/:promoId",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"name\":\"name\",\"description\":\"descriptions\"}"
+								},
+								"url": {
+									"raw": "localhost:3000/promotions/5c331a69396a0031c0417cae",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"promotions",
+										"5c331a69396a0031c0417cae"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:3000/promotions/:promoId",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "localhost:3000/promotions/5c331a69396a0031c0417cae",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"promotions",
+										"5c331a69396a0031c0417cae"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:3000/promotions/:promoId",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"name\":\"promotion-2\"}"
+								},
+								"url": {
+									"raw": "localhost:3000/promotions/5c331b4497274036b8096db1",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"promotions",
+										"5c331b4497274036b8096db1"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		},
+		{
+			"name": "leaders",
+			"item": [
+				{
+					"name": "localhost:3000/leaders",
+					"item": [
+						{
+							"name": "localhost:3000/leaders",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "localhost:3000/leaders",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"leaders"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:3000/leaders",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"name\":\"nameo\",\"description\":\"dumb dest\"}"
+								},
+								"url": {
+									"raw": "localhost:3000/leaders",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"leaders"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:3000/leaders",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"name\":\"nameo\",\"description\":\"dumb dest\"}"
+								},
+								"url": {
+									"raw": "localhost:3000/leaders",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"leaders"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:3000/leaders",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "localhost:3000/leaders",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"leaders"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "localhost:3000/leaders/:leaderid",
+					"item": [
+						{
+							"name": "localhost:3000/leaders/leaderid",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "localhost:3000/leaders/5c333630886a473f48a975c3",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"leaders",
+										"5c333630886a473f48a975c3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:3000/leaders/:leaderid",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "localhost:3000/leaders/5c333630886a473f48a975c3",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"leaders",
+										"5c333630886a473f48a975c3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:3000/leaders/:leaderid",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "localhost:3000/leaders/5c333630886a473f48a975c3",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"leaders",
+										"5c333630886a473f48a975c3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:3000/leaders/:leaderid",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n      \"name\": \"Alberto Somayya\",\r\n      \"image\": \"images/alberto.png\",\r\n      \"designation\": \"Executive Chef\",\r\n      \"abbr\": \"EC\",\r\n      \"featured\": \"true\",\r\n      \"description\": \"Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. He says, Put together the cuisines from the two craziest cultures, and you get a winning hit! Amma Mia!\"\r\n    }"
+								},
+								"url": {
+									"raw": "localhost:3000/leaders/5c33581ee94cfb36c83533c4",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"leaders",
+										"5c33581ee94cfb36c83533c4"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		},
+		{
+			"name": "basic-auth",
+			"item": [
+				{
+					"name": "localhost:3000/",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic YWRtaW46cGFzc3dvcmQ="
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:3000/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": ":3000/users/signup",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n      \"username\": \"Pssra\",\r\n      \"password\": \"password\"\r\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/users/signup",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "passport-auth",
+			"item": [
+				{
+					"name": "localhost:3000/users/signup",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"username\":\"Joe\",\"password\":\"pass\"}"
+						},
+						"url": {
+							"raw": "localhost:3000/users/signup",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/users/login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"username\":\"Joe\",\"password\":\"pass\"}"
+						},
+						"url": {
+							"raw": "localhost:3000/users/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/dishes",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:3000/dishes",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"dishes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/users/logout",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:3000/users/logout",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "passport-jwt",
+			"item": [
+				{
+					"name": "signup",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"username\":\"jaci\",\"password\":\"pass\"}"
+						},
+						"url": {
+							"raw": "localhost:3000/users/signup",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"username\":\"jaci\",\"password\":\"pass\"}"
+						},
+						"url": {
+							"raw": "localhost:3000/users/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/dishes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:3000/dishes",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"dishes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "unauthorized localhost:3000/dishes",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"wheat cake\",\n\t\"image\":\"\",\n\t\"category\":\"\",\n\t\"price\":\"4323\",\n\t\"description\":\"ewd\"\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/dishes",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"dishes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/dishes unauthorized",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"wheat cake\",\n\t\"image\":\"\",\n\t\"category\":\"\",\n\t\"price\":\"4323\",\n\t\"description\":\"ewd\"\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/dishes",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"dishes"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "mongoose population",
+			"item": [
+				{
+					"name": "localhost:3000/users/signup",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"username\":\"joe\", \"password\":\"pass\",\"firstname\":\"joeseph\",\"lastname\":\"rk\"}"
+						},
+						"url": {
+							"raw": "localhost:3000/users/signup",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/users/login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"username\":\"joe\", \"password\":\"pass\"}"
+						},
+						"url": {
+							"raw": "localhost:3000/users/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/dishes add dish with auth header",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YzNlZDVhZTVjMjg4ODRhODQwZmRkMTMiLCJpYXQiOjE1NDc2MjE4MTMsImV4cCI6MTU0NzYyNTQxM30.Wzp1gvmH2-fOX8wOxTSjTiLGqdWNkHGhokFaxQhki1Y",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n      \"name\": \"Uthappizza\",\r\n      \"image\": \"images/uthappizza.png\",\r\n      \"category\": \"mains\",\r\n      \"label\": \"Hot\",\r\n      \"price\": \"4.99\",\r\n      \"featured\": \"true\",\r\n      \"description\": \"A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.\",\r\n      \"comments\":[]\r\n }"
+						},
+						"url": {
+							"raw": "localhost:3000/dishes",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"dishes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/dishes/ no auth",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:3000/dishes/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"dishes",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get auth /dishes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:3000/dishes/?Content-Type=application/json&Authorization=bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YzNlZDVhZTVjMjg4ODRhODQwZmRkMTMiLCJpYXQiOjE1NDc2MjE4MTMsImV4cCI6MTU0NzYyNTQxM30.Wzp1gvmH2-fOX8wOxTSjTiLGqdWNkHGhokFaxQhki1Y",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"dishes",
+								""
+							],
+							"query": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Authorization",
+									"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YzNlZDVhZTVjMjg4ODRhODQwZmRkMTMiLCJpYXQiOjE1NDc2MjE4MTMsImV4cCI6MTU0NzYyNTQxM30.Wzp1gvmH2-fOX8wOxTSjTiLGqdWNkHGhokFaxQhki1Y"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/dishes/5c3ed169094426239cde9a1f/comments no auth",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:3000/dishes/5c3ed6025c28884a840fdd14/comments",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"dishes",
+								"5c3ed6025c28884a840fdd14",
+								"comments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/dishes/5c3ed169094426239cde9a1f/comments with auth",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YzNlZDVhZTVjMjg4ODRhODQwZmRkMTMiLCJpYXQiOjE1NDc2MjE4MTMsImV4cCI6MTU0NzYyNTQxM30.Wzp1gvmH2-fOX8wOxTSjTiLGqdWNkHGhokFaxQhki1Y",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:3000/dishes/5c3ed169094426239cde9a1f/comments",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"dishes",
+								"5c3ed169094426239cde9a1f",
+								"comments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/dishes/5c3ed169094426239cde9a1f/comments ",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YzNlZDVhZTVjMjg4ODRhODQwZmRkMTMiLCJpYXQiOjE1NDc2MjE4MTMsImV4cCI6MTU0NzYyNTQxM30.Wzp1gvmH2-fOX8wOxTSjTiLGqdWNkHGhokFaxQhki1Y",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"rating\":\"5\",\"comment\":\"This is a comment\"}"
+						},
+						"url": {
+							"raw": "localhost:3000/dishes/5c3ed6025c28884a840fdd14/comments",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"dishes",
+								"5c3ed6025c28884a840fdd14",
+								"comments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/dishes/",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YzNlZDVhZTVjMjg4ODRhODQwZmRkMTMiLCJpYXQiOjE1NDc2MjE4MTMsImV4cCI6MTU0NzYyNTQxM30.Wzp1gvmH2-fOX8wOxTSjTiLGqdWNkHGhokFaxQhki1Y",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:3000/dishes/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"dishes",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "file upload",
+			"item": [
+				{
+					"name": "signup",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/users/login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"admin\",\r\n    \"firstname\": \"admin-firstname\",\r\n    \"lastname\": \"admin-lastname\",\r\n    \"password\": \"pass\"\r\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/users/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:3443/users/login https",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"admin\",\r\n    \"firstname\": \"admin-firstname\",\r\n    \"lastname\": \"admin-lastname\",\r\n    \"password\": \"pass\"\r\n}"
+						},
+						"url": {
+							"raw": "https://localhost:3443/users/login",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "3443",
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:3443/imageUpload",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YzQ4NDA2NDZhMTg2YzFkODA5YzA2ODEiLCJpYXQiOjE1NDgyMzg5NTksImV4cCI6MTU0ODI0MjU1OX0.oZym27leZEYd-ZJM56ix5sgfnKPExoUzBnsTBdMdD6E",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "imageFile",
+									"type": "file",
+									"src": ""
+								}
+							]
+						},
+						"url": {
+							"raw": "https://localhost:3443/imageUpload",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "3443",
+							"path": [
+								"imageUpload"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "cors",
+			"item": [
+				{
+					"name": "localhost:3000/dishes",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:3000/dishes",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"dishes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/disheslogin admin",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\":\"admin\",\n\t\"password\":\"pass\"\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/users/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/dishessame origin header",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YzQ4NDA2NDZhMTg2YzFkODA5YzA2ODEiLCJpYXQiOjE1NDgzOTc2NDcsImV4cCI6MTU0ODQwMTI0N30.Pu-KFkkNiOARMYYYVE6CdicSqa8DLCG3z2Wjn2bQ-Rw",
+								"type": "text"
+							},
+							{
+								"key": "Origin",
+								"value": "https://localhost:3443",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\":\"admin\",\n\t\"password\":\"pass\"\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/dishes",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"dishes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/dishes different origin",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YzQ4NDA2NDZhMTg2YzFkODA5YzA2ODEiLCJpYXQiOjE1NDgzOTc2NDcsImV4cCI6MTU0ODQwMTI0N30.Pu-KFkkNiOARMYYYVE6CdicSqa8DLCG3z2Wjn2bQ-Rw",
+								"type": "text"
+							},
+							{
+								"key": "Origin",
+								"value": "https://localhost:2000",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\":\"admin\",\n\t\"password\":\"pass\"\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/dishes",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"dishes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:3443/dishes options preflighting ",
+					"request": {
+						"method": "OPTIONS",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YzQ4NDA2NDZhMTg2YzFkODA5YzA2ODEiLCJpYXQiOjE1NDgzOTc2NDcsImV4cCI6MTU0ODQwMTI0N30.Pu-KFkkNiOARMYYYVE6CdicSqa8DLCG3z2Wjn2bQ-Rw",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Origin",
+								"value": "https://localhost:3443",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\":\"admin\",\n\t\"password\":\"pass\"\n}"
+						},
+						"url": {
+							"raw": "https://localhost:3443/dishes",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "3443",
+							"path": [
+								"dishes"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "facebook-oauth",
+			"item": [
+				{
+					"name": "https://localhost:3443/users/facebook/token",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "https://localhost:3443",
+								"type": "text"
+							},
+							{
+								"key": "access_token",
+								"value": "EAANbbcUNxnUBALYOtdyGjcrR9pzOIxnjPUC3EVrOZBXHS7ffaBvbskK1dTStpULOYbsuHVMEAVpLbeGOhcWsqtWTsAkJiZCk5lKKZC6DOuliZC4ZCZCZCQ3MK0irZBU10fGZC4okms6NISZA4UZBZBl3s7imPGyB2sJAZBpv5odtkPfb9bgZC6PP52P8QH1LD3Cc3Q8JtJfIrVJptuXgZDZD",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:3443/users/facebook/token",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "3443",
+							"path": [
+								"users",
+								"facebook",
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:3443/users/facebook/token",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "https://localhost:3443",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer EAANbbcUNxnUBALYOtdyGjcrR9pzOIxnjPUC3EVrOZBXHS7ffaBvbskK1dTStpULOYbsuHVMEAVpLbeGOhcWsqtWTsAkJiZCk5lKKZC6DOuliZC4ZCZCZCQ3MK0irZBU10fGZC4okms6NISZA4UZBZBl3s7imPGyB2sJAZBpv5odtkPfb9bgZC6PP52P8QH1LD3Cc3Q8JtJfIrVJptuXgZDZD",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:3443/users/facebook/token",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "3443",
+							"path": [
+								"users",
+								"facebook",
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:3443/users/facebook/token?access_token=EAANbbcUNxnUBALYOtdyGjcrR9pzOIxnjPUC3EVrOZBXHS7ffaBvbskK1dTStpULOYbsuHVMEAVpLbeGOhcWsqtWTsAkJiZCk5lKKZC6DOuliZC4ZCZCZCQ3MK0irZBU10fGZC4okms6NISZA4UZBZBl3s7imPGyB2sJAZBpv5odtkPfb9bgZC6PP52P8QH1LD3Cc3Q8JtJfIrVJptuXgZDZD",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "https://localhost:3443",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer EAANbbcUNxnUBALYOtdyGjcrR9pzOIxnjPUC3EVrOZBXHS7ffaBvbskK1dTStpULOYbsuHVMEAVpLbeGOhcWsqtWTsAkJiZCk5lKKZC6DOuliZC4ZCZCZCQ3MK0irZBU10fGZC4okms6NISZA4UZBZBl3s7imPGyB2sJAZBpv5odtkPfb9bgZC6PP52P8QH1LD3Cc3Q8JtJfIrVJptuXgZDZD",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:3443/users/facebook/token?access_token=EAANbbcUNxnUBALYOtdyGjcrR9pzOIxnjPUC3EVrOZBXHS7ffaBvbskK1dTStpULOYbsuHVMEAVpLbeGOhcWsqtWTsAkJiZCk5lKKZC6DOuliZC4ZCZCZCQ3MK0irZBU10fGZC4okms6NISZA4UZBZBl3s7imPGyB2sJAZBpv5odtkPfb9bgZC6PP52P8QH1LD3Cc3Q8JtJfIrVJptuXgZDZD",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "3443",
+							"path": [
+								"users",
+								"facebook",
+								"token"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "EAANbbcUNxnUBALYOtdyGjcrR9pzOIxnjPUC3EVrOZBXHS7ffaBvbskK1dTStpULOYbsuHVMEAVpLbeGOhcWsqtWTsAkJiZCk5lKKZC6DOuliZC4ZCZCZCQ3MK0irZBU10fGZC4okms6NISZA4UZBZBl3s7imPGyB2sJAZBpv5odtkPfb9bgZC6PP52P8QH1LD3Cc3Q8JtJfIrVJptuXgZDZD"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:3443/users/facebook/token",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "https://localhost:3443",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer EAANbbcUNxnUBAAxo8EMSFiASyZAYpDwKs9FlrZB5HCQYiU6ZAugWi7ek4AxZBEV5YodzoatUbp1FHt7eRvZBJN7AE2sycsYmQBxfkZCoNTfL1cEFprRo03auLtCFqJqBWeNd6I4goiL4mz8jq2SDLr0ltOgvmpnUT4nw42zoadxQZDZD",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:3443/users/facebook/token",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "3443",
+							"path": [
+								"users",
+								"facebook",
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:3443/users/facebook/token",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "https://localhost:3443",
+								"type": "text"
+							},
+							{
+								"key": "access_token",
+								"value": "EAANbbcUNxnUBAAxo8EMSFiASyZAYpDwKs9FlrZB5HCQYiU6ZAugWi7ek4AxZBEV5YodzoatUbp1FHt7eRvZBJN7AE2sycsYmQBxfkZCoNTfL1cEFprRo03auLtCFqJqBWeNd6I4goiL4mz8jq2SDLr0ltOgvmpnUT4nw42zoadxQZDZD",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:3443/users/facebook/token",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "3443",
+							"path": [
+								"users",
+								"facebook",
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:3443/users/facebook/token?access_token=EAANbbcUNxnUBAAxo8EMSFiASyZAYpDwKs9FlrZB5HCQYiU6ZAugWi7ek4AxZBEV5YodzoatUbp1FHt7eRvZBJN7AE2sycsYmQBxfkZCoNTfL1cEFprRo03auLtCFqJqBWeNd6I4goiL4mz8jq2SDLr0ltOgvmpnUT4nw42zoadxQZDZD",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "https://localhost:3443",
+								"type": "text"
+							},
+							{
+								"key": "access_token",
+								"value": "EAANbbcUNxnUBAAxo8EMSFiASyZAYpDwKs9FlrZB5HCQYiU6ZAugWi7ek4AxZBEV5YodzoatUbp1FHt7eRvZBJN7AE2sycsYmQBxfkZCoNTfL1cEFprRo03auLtCFqJqBWeNd6I4goiL4mz8jq2SDLr0ltOgvmpnUT4nw42zoadxQZDZD",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:3443/users/facebook/token?access_token=EAANbbcUNxnUBAAxo8EMSFiASyZAYpDwKs9FlrZB5HCQYiU6ZAugWi7ek4AxZBEV5YodzoatUbp1FHt7eRvZBJN7AE2sycsYmQBxfkZCoNTfL1cEFprRo03auLtCFqJqBWeNd6I4goiL4mz8jq2SDLr0ltOgvmpnUT4nw42zoadxQZDZD",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "3443",
+							"path": [
+								"users",
+								"facebook",
+								"token"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "EAANbbcUNxnUBAAxo8EMSFiASyZAYpDwKs9FlrZB5HCQYiU6ZAugWi7ek4AxZBEV5YodzoatUbp1FHt7eRvZBJN7AE2sycsYmQBxfkZCoNTfL1cEFprRo03auLtCFqJqBWeNd6I4goiL4mz8jq2SDLr0ltOgvmpnUT4nw42zoadxQZDZD"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "favorites",
+			"item": [
+				{
+					"name": "https://localhost:3443/users/login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"yuki\",\n\t\"username\":\"yuki\",\n\t\"password\":\"pass\"\n}"
+						},
+						"url": {
+							"raw": "https://localhost:3443/users/login",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "3443",
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:3443/dishes",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YzRjYzI0NDQwOTlmZjBlM2MyN2UzN2EiLCJpYXQiOjE1NDg1MzQzNjQsImV4cCI6MTU0ODUzNzk2NH0.NqjfB_W2baSnFXR5s9Qj1KAnBuRpV38DuIh40zlj0h4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"yuki\",\n\t\"username\":\"yuki\",\n\t\"password\":\"pass\"\n}"
+						},
+						"url": {
+							"raw": "https://localhost:3443/dishes",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "3443",
+							"path": [
+								"dishes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:3443/favorites",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YzRjYzI0NDQwOTlmZjBlM2MyN2UzN2EiLCJpYXQiOjE1NDg2NTYxNjEsImV4cCI6MTU0ODY1OTc2MX0.1LSdkLWNirhHq3Dy-BJDPiqBzVLcCWiqXbxLZ2SIoI4",
+								"type": "text"
+							},
+							{
+								"key": "Origin",
+								"value": "https://localhost:3443",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"yuki\",\n\t\"username\":\"yuki\",\n\t\"password\":\"pass\"\n}"
+						},
+						"url": {
+							"raw": "https://localhost:3443/favorites",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "3443",
+							"path": [
+								"favorites"
+							],
+							"query": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:3443/dishes/",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YzRjYzI0NDQwOTlmZjBlM2MyN2UzN2EiLCJpYXQiOjE1NDg2NTcwMTIsImV4cCI6MTU0ODY2MDYxMn0.6dTZViF72jZcvpHNsLt4Ca3QbA3uwnO9dFi3EIF9lUQ",
+								"type": "text"
+							},
+							{
+								"key": "Origin",
+								"value": "https://localhost:3443",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n      \"name\": \"Vadonut\",\r\n      \"image\": \"images/vadonut.png\",\r\n      \"category\": \"appetizer\",\r\n      \"label\": \"New\",\r\n      \"price\": \"1.99\",\r\n      \"featured\": \"false\",\r\n      \"description\": \"A quintessential ConFusion experience, is it a vada or is it a donut?\"\r\n    }\r\n  "
+						},
+						"url": {
+							"raw": "https://localhost:3443/dishes/",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "3443",
+							"path": [
+								"dishes",
+								""
+							],
+							"query": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:3443/favorites/",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YzRjYzI0NDQwOTlmZjBlM2MyN2UzN2EiLCJpYXQiOjE1NDg2NTcwMTIsImV4cCI6MTU0ODY2MDYxMn0.6dTZViF72jZcvpHNsLt4Ca3QbA3uwnO9dFi3EIF9lUQ",
+								"type": "text"
+							},
+							{
+								"key": "Origin",
+								"value": "https://localhost:3443",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:3443/favorites/",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "3443",
+							"path": [
+								"favorites",
+								""
+							],
+							"query": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:3443/favorites/5c4ea11580477a3b74d1890d",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YzRjYzI0NDQwOTlmZjBlM2MyN2UzN2EiLCJpYXQiOjE1NDg2NTcwMTIsImV4cCI6MTU0ODY2MDYxMn0.6dTZViF72jZcvpHNsLt4Ca3QbA3uwnO9dFi3EIF9lUQ",
+								"type": "text"
+							},
+							{
+								"key": "Origin",
+								"value": "https://localhost:3443",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:3443/favorites/5c4ea11580477a3b74d1890d",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "3443",
+							"path": [
+								"favorites",
+								"5c4ea11580477a3b74d1890d"
+							],
+							"query": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:3443/favorites/",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YzRjYzI0NDQwOTlmZjBlM2MyN2UzN2EiLCJpYXQiOjE1NDg2NTcwMTIsImV4cCI6MTU0ODY2MDYxMn0.6dTZViF72jZcvpHNsLt4Ca3QbA3uwnO9dFi3EIF9lUQ",
+								"type": "text"
+							},
+							{
+								"key": "Origin",
+								"value": "https://localhost:3443",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\t\n\t{ \"_id\" : \"5c4ea12280477a3b74d1890e\" }\t\n]"
+						},
+						"url": {
+							"raw": "https://localhost:3443/favorites/",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "3443",
+							"path": [
+								"favorites",
+								""
+							],
+							"query": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:3443/favorites/",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YzRjYzI0NDQwOTlmZjBlM2MyN2UzN2EiLCJpYXQiOjE1NDg2NTcwMTIsImV4cCI6MTU0ODY2MDYxMn0.6dTZViF72jZcvpHNsLt4Ca3QbA3uwnO9dFi3EIF9lUQ",
+								"type": "text"
+							},
+							{
+								"key": "Origin",
+								"value": "https://localhost:3443",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\t\n\t{ \"_id\" : \"5c4ea12280477a3b74d1890e\" }\t\n]"
+						},
+						"url": {
+							"raw": "https://localhost:3443/favorites/",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "3443",
+							"path": [
+								"favorites",
+								""
+							],
+							"query": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:3443/favorites/",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YzRjYzI0NDQwOTlmZjBlM2MyN2UzN2EiLCJpYXQiOjE1NDg2NTcwMTIsImV4cCI6MTU0ODY2MDYxMn0.6dTZViF72jZcvpHNsLt4Ca3QbA3uwnO9dFi3EIF9lUQ",
+								"type": "text"
+							},
+							{
+								"key": "Origin",
+								"value": "https://localhost:3443",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\t\n\t{ \"_id\" : \"5c4ea10380477a3b74d1890c\" },\n\t{ \"_id\" : \"5c4ea11580477a3b74d1890d\" },\n\t{ \"_id\" : \"5c4ea12280477a3b74d1890e\" }\n]"
+						},
+						"url": {
+							"raw": "https://localhost:3443/favorites/",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "3443",
+							"path": [
+								"favorites",
+								""
+							],
+							"query": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:3443/favorites/",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YzRjYzI0NDQwOTlmZjBlM2MyN2UzN2EiLCJpYXQiOjE1NDg2NTcwMTIsImV4cCI6MTU0ODY2MDYxMn0.6dTZViF72jZcvpHNsLt4Ca3QbA3uwnO9dFi3EIF9lUQ",
+								"type": "text"
+							},
+							{
+								"key": "Origin",
+								"value": "https://localhost:3443",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\t\n\t{ \"_id\" : \"5c4ea10380477a3b74d1890c\" },\n\t{ \"_id\" : \"5c4ea11580477a3b74d1890d\" },\n\t{ \"_id\" : \"5c4ea12280477a3b74d1890e\" }\n]"
+						},
+						"url": {
+							"raw": "https://localhost:3443/favorites/",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "3443",
+							"path": [
+								"favorites",
+								""
+							],
+							"query": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:3443/favorites/5c4ea10380477a3b74d1890c",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YzRjYzI0NDQwOTlmZjBlM2MyN2UzN2EiLCJpYXQiOjE1NDg2NTcwMTIsImV4cCI6MTU0ODY2MDYxMn0.6dTZViF72jZcvpHNsLt4Ca3QbA3uwnO9dFi3EIF9lUQ",
+								"type": "text"
+							},
+							{
+								"key": "Origin",
+								"value": "https://localhost:3443",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\t\n\t{ \"_id\" : \"5c4ea10380477a3b74d1890c\" },\n\t{ \"_id\" : \"5c4ea11580477a3b74d1890d\" },\n\t{ \"_id\" : \"5c4ea12280477a3b74d1890e\" }\n]"
+						},
+						"url": {
+							"raw": "https://localhost:3443/favorites/5c4ea10380477a3b74d1890c",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "3443",
+							"path": [
+								"favorites",
+								"5c4ea10380477a3b74d1890c"
+							],
+							"query": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:3443/favorites/",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YzRjYzI0NDQwOTlmZjBlM2MyN2UzN2EiLCJpYXQiOjE1NDg2NTcwMTIsImV4cCI6MTU0ODY2MDYxMn0.6dTZViF72jZcvpHNsLt4Ca3QbA3uwnO9dFi3EIF9lUQ",
+								"type": "text"
+							},
+							{
+								"key": "Origin",
+								"value": "https://localhost:3443",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\t\n\t{ \"_id\" : \"5c4ea10380477a3b74d1890c\" },\n\t{ \"_id\" : \"5c4ea11580477a3b74d1890d\" },\n\t{ \"_id\" : \"5c4ea12280477a3b74d1890e\" }\n]"
+						},
+						"url": {
+							"raw": "https://localhost:3443/favorites/",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "3443",
+							"path": [
+								"favorites",
+								""
+							],
+							"query": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:3443/favorites/",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YzRjYzI0NDQwOTlmZjBlM2MyN2UzN2EiLCJpYXQiOjE1NDg2NTcwMTIsImV4cCI6MTU0ODY2MDYxMn0.6dTZViF72jZcvpHNsLt4Ca3QbA3uwnO9dFi3EIF9lUQ",
+								"type": "text"
+							},
+							{
+								"key": "Origin",
+								"value": "https://localhost:3443",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\t\n\t{ \"_id\" : \"5c4ea10380477a3b74d1890c\" },\n\t{ \"_id\" : \"5c4ea11580477a3b74d1890d\" },\n\t{ \"_id\" : \"5c4ea12280477a3b74d1890e\" }\n]"
+						},
+						"url": {
+							"raw": "https://localhost:3443/favorites/",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "3443",
+							"path": [
+								"favorites",
+								""
+							],
+							"query": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:3443/favorites/",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YzRjYzI0NDQwOTlmZjBlM2MyN2UzN2EiLCJpYXQiOjE1NDg2NTcwMTIsImV4cCI6MTU0ODY2MDYxMn0.6dTZViF72jZcvpHNsLt4Ca3QbA3uwnO9dFi3EIF9lUQ",
+								"type": "text"
+							},
+							{
+								"key": "Origin",
+								"value": "https://localhost:3443",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\t\n\t{ \"_id\" : \"5c4ea10380477a3b74d1890c\" },\n\t{ \"_id\" : \"5c4ea11580477a3b74d1890d\" },\n\t{ \"_id\" : \"5c4ea12280477a3b74d1890e\" }\n]"
+						},
+						"url": {
+							"raw": "https://localhost:3443/favorites/",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "3443",
+							"path": [
+								"favorites",
+								""
+							],
+							"query": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
