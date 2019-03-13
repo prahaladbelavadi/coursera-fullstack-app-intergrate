@@ -22,7 +22,7 @@ dishRouter.use(bodyParser.json());
 
 dishRouter.route('/')
 .options(cors.corsWithOptions,(req, res)=>{res.sendStatus(200)})
-    .get(    (req, res, next) => {
+    .get((req, res, next) => {
         Dishes.find(req.query)
         .populate('comments.author')
             .then((dishes)=>{
